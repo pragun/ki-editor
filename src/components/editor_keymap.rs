@@ -15,10 +15,10 @@ pub(crate) const KEYMAP_SCORE: [[char; 10]; 3] = [
 
 pub(crate) const KEYMAP_NORMAL: [[Meaning; 10]; 3] = [
     [
-        SrchN, SWord, SrchC, MultC, Swap_, /****/ Mark_, Prev_, Up___, Next_, PsteN,
+        SrchN, SWord, SrchC, MultC, Swap_, /****/ Prev_, InstP, InstN, Next_, PsteN,
     ],
     [
-        Line_, Word_, Sytx_, Chng_, Extnd, /****/ InstP, Left_, Down_, Right, InstN,
+        Line_, Word_, Sytx_, Chng_, Extnd, /****/ Left_, Down_,Up___, Right, Mark_,
     ],
     [
         Undo_, Rplc_, Copy_, DeltN, OpenN, /****/ RSrhF, Jump_, First, Last_, XAchr,
@@ -27,13 +27,13 @@ pub(crate) const KEYMAP_NORMAL: [[Meaning; 10]; 3] = [
 
 pub(crate) const KEYMAP_NORMAL_SHIFTED: [[Meaning; 10]; 3] = [
     [
-        SrchP, Char_, _____, _____, Raise, /****/ MarkF, RplcP, Join_, RplcN, PsteP,
+        SrchP, Char_, _____, _____, Raise, /****/ _____, RplcP, RplcN, _____, PsteP,
     ],
     [
-        LineF, _____, FStyx, ChngX, Trsfm, /****/ CrsrP, DeDnt, Break, Indnt, CrsrN,
+        LineF, _____, FStyx, ChngX, Trsfm, /****/ DeDnt, Join_, Break, Indnt, MarkF,
     ],
     [
-        Redo_, PRplc, RplcX, DeltP, OpenP, /****/ RSrhB, ToIdx, _____, _____, SSEnd,
+        Redo_, PRplc, RplcX, DeltP, OpenP, /****/ RSrhB, ToIdx, CrsrP, CrsrN, SSEnd,
     ],
     // Why is Raise placed at the same Position as Swap?
     // Because Raise is a special-case of Swap where the movement is Up
